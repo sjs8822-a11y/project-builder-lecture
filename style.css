@@ -10,6 +10,8 @@
   --button-bg: #2563eb;
   --button-hover: #1d4ed8;
   --button-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
 }
 
 body.dark {
@@ -21,6 +23,8 @@ body.dark {
   --row-bg: #334155;
   --label-color: #60a5fa;
   --shadow-color: rgba(0, 0, 0, 0.4);
+  --input-bg: #334155;
+  --input-border: #475569;
 }
 
 * {
@@ -150,6 +154,68 @@ button:not(.theme-toggle):hover {
 .range-21-30 { background: #ef4444; }
 .range-31-40 { background: #6b7280; }
 .range-41-45 { background: #22c55e; }
+
+/* Partnership Form Styles */
+.partnership-container {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--text-muted);
+  text-align: left;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-desc {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 10px;
+}
 
 .note {
   margin-top: 24px;
